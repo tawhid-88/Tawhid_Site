@@ -1,0 +1,97 @@
+
+
+/* Custom Styles for the Page */
+:root {
+    --text-color-light: #1e293b;
+    --primary-color-light: #00809D;
+    /* Teal */
+    --button-bg-light: #FF7900;
+    --button-hover-light: #d96700;
+}
+
+body {
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Courier New', monospace;
+    background-color: #ffffff;
+    color: var(--text-color-light);
+    scroll-behavior: smooth;
+}
+
+.text-muted {
+    color: #64748b;
+}
+
+/* 3D Canvas Styles */
+#tech-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Places the canvas behind all other content */
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.05);
+    /* Back to light grey */
+    color: var(--text-color-light);
+    /* Back to default text color */
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #FF4F0F;
+    /* Orange background on hover */
+    color: white;
+    /* White icon color on hover */
+    transform: translateY(-2px);
+}
+
+.profile-image-container {
+    position: relative;
+    /* Adjust size for the orange border */
+    width: 240px;
+    /* Bigger DP size */
+    height: 240px;
+    /* Bigger DP size */
+    margin: auto;
+    /* Center the DP */
+    border-radius: 50%;
+    border: 5px solid #FF4F0F;
+    /* Orange border */
+    overflow: hidden;
+    /* Ensure image stays within border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+}
+
+@media (min-width: 768px) {
+    .profile-image-container {
+        width: 320px;
+        /* Larger for desktop */
+        height: 320px;
+        /* Larger for desktop */
+    }
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Keep image circular */
+    position: relative;
+    z-index: 2;
+    /* Ensure image is above the animation */
+}
+
