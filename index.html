@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://tawhidhasan.me">
-    <meta name="keywords" content="Tawhid Hasan, Portfolio, Computer Science, North South University, Web Developer, CSE Student, UI/UX Design, C++, JavaScript">
+    <meta name="keywords"
+        content="Tawhid Hasan, tawhid88, tawhid-88, Portfolio, Computer Science, North South University, Web Developer, CSE Student, UI/UX Design, C++, JavaScript">
 
-    <title>Tawhid Hasan | Computer Science Student | North South University</title>
+    <title> Tawhid Hasan </title>
 
     <meta name="description"
         content="The portfolio of Tawhid Hasan, a Computer Science & Engineering student at North South University specializing in web development, C++, and UI/UX design.">
@@ -36,6 +37,7 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Tawhid Hasan",
+      "alternateName": "tawhid88",
       "url": "https://tawhidhasan.me",
       "image": "https://tawhidhasan.me/tawhid_dp.jpg",
       "jobTitle": "Computer Science & Engineering Student",
@@ -47,16 +49,19 @@
       ],
       "memberOf": {
         "@type": "CollegeOrUniversity",
-        "name": "North South University"
+        "name": "North South University",
+        "url": "https://www.northsouth.edu"
       },
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
-          "name": "Dhaka College"
+          "name": "Dhaka College",
+          "url": "https://www.dhakacollege.edu.bd"
         },
         {
           "@type": "EducationalOrganization",
-          "name": "R.B. Govt High School, Joypurhat"
+          "name": "R.B. Govt High School, Joypurhat",
+          "url": "https://www.rbgovthighschool.edu.bd/"
         }
       ],
       "knowsAbout": [
@@ -77,16 +82,33 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="icon" type="image/png" href="https://www.tawhidhasan.me/favicon.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <canvas id="tech-canvas"></canvas>
-    <!-- Main Landing Section -->
-    <main class="flex flex-col md:flex-row md:min-h-screen">
+    <!-- Navigation -->
+    <nav id="navbar"
+        class="fixed top-0 w-full z-50 transition-all duration-300 py-4 px-8 flex justify-between items-center text-gray-800 bg-white/70 backdrop-blur-md shadow-sm">
+        <a href="#home" class="text-2xl font-bold tracking-tighter hover:text-[#00809D] transition">Tawhid Hasan</a>
+        <div class="hidden md:flex gap-6 font-semibold items-center">
+            <a href="#home" class="nav-link text-[#00809D]">Home</a>
+            <a href="#about" class="nav-link hover:text-[#00809D] transition">About</a>
+            <a href="#experience" class="nav-link hover:text-[#00809D] transition">Experience</a>
+            <button id="theme-toggle"
+                class="ml-4 w-10 h-10 rounded-full flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition text-[#1e293b]"
+                aria-label="Toggle Dark Mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Home Section (Enhanced Hero) -->
+    <section id="home"
+        class="min-h-screen flex flex-col md:flex-row items-center justify-center p-8 md:p-12 relative pt-20">
         <!-- Image Panel -->
-        <div class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-12 order-1 md:order-1">
+        <div class="w-full md:w-1/2 flex items-center justify-center order-1 md:order-1 mb-8 md:mb-0">
             <div class="profile-image-container">
                 <img src="tawhid_dp.jpg" alt="A headshot of Tawhid Hasan, a computer science student."
                     class="profile-image">
@@ -94,51 +116,139 @@
         </div>
 
         <!-- Info Panel -->
-        <div class="w-full md:w-1/2 flex items-center justify-center p-8 md:p-12 order-2 md:order-2">
-            <div class="max-w-md text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-                    Tawhid Hasan
-                </h1>
-                <p class="mt-4 text-lg md:text-xl text-muted">
-                    Computer Science & Engineering Student at North South University
-                </p>
+        <div
+            class="w-full md:w-1/2 flex flex-col items-center justify-center md:items-start text-center md:text-left order-2 md:order-2">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-2">
+                Tawhid Hasan
+            </h1>
+            <h2 class="text-xl md:text-2xl text-[#00809D] font-semibold h-8 mb-4 flex items-center">
+                <span id="typewriter"></span><span
+                    class="cursor inline-block w-[2px] h-[1em] bg-[#FF4F0F] ml-1 animate-pulse"></span>
+            </h2>
+            <p class="text-lg md:text-xl text-muted max-w-md mb-8">
+                Computer Science & Engineering Student at North South University.
+            </p>
 
-                <!-- Social Links Banner -->
-                <div class="mt-8">
-                    <p
-                        class="text-sm font-semibold uppercase tracking-wider text-[#FF4F0F] text-center md:text-left mb-4">
-                        Social Media Links
-                    </p>
-                    <!-- Social Links -->
-                    <div class="flex justify-center md:justify-start gap-4">
-                        <a href="https://github.com/tawhid-88" target="_blank" data-name="GitHub" title="GitHub" class="social-link">
-                            <i class="fa-brands fa-github text-xl"></i>
-                        </a>
-                        <a href="https://www.instagram.com/hasan__tawhid/" target="_blank" data-name="Instagram" title="Instagram"
-                            class="social-link">
-                            <i class="fa-brands fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://x.com/TawhidHasan16" target="_blank" data-name="Twitter/X" title="Twitter" class="social-link">
-                            <i class="fa-brands fa-x-twitter text-xl"></i>
-                        </a>
-                        <a href="mailto:tawhidhasan88@gmail.com" data-name="Email" title="Email" class="social-link">
-                            <i class="fa-solid fa-envelope text-xl"></i>
-                        </a>
-                        <a href="https://www.facebook.com/tawhid.hasan.88/" target="_blank" data-name="Facebook" title="Facebook"
-                            class="social-link">
-                            <i class="fa-brands fa-facebook text-xl"></i>
-                        </a>
-                        <a href="https://wa.me/8801794948969" target="_blank" data-name="WhatsApp" title="WhatsApp" class="social-link">
-                            <i class="fa-brands fa-whatsapp text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-
+            <p
+                class="text-sm font-semibold uppercase tracking-wider text-[#FF4F0F] mb-4 text-center md:text-left w-full">
+                Connect with me</p>
+            <!-- Social Links -->
+            <div class="flex justify-center md:justify-start gap-4">
+                <a href="https://github.com/tawhid-88" target="_blank" data-name="GitHub" class="social-link"><i
+                        class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://www.instagram.com/hasan__tawhid/" target="_blank" data-name="Instagram"
+                    class="social-link"><i class="fa-brands fa-instagram text-xl"></i></a>
+                <a href="https://x.com/TawhidHasan16" target="_blank" data-name="Twitter/X" class="social-link"><i
+                        class="fa-brands fa-x-twitter text-xl"></i></a>
+                <a href="mailto:tawhidhasan88@gmail.com" data-name="Email" class="social-link"><i
+                        class="fa-solid fa-envelope text-xl"></i></a>
+                <a href="https://www.facebook.com/tawhid.hasan.88/" target="_blank" data-name="Facebook"
+                    class="social-link"><i class="fa-brands fa-facebook text-xl"></i></a>
+                <a href="https://wa.me/8801794948969" target="_blank" data-name="WhatsApp" class="social-link"><i
+                        class="fa-brands fa-whatsapp text-xl"></i></a>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="text-center py-8 px-4 text-muted border-t border-gray-200">
+    <!-- About Section -->
+    <section id="about" class="py-20 px-8 md:px-24 bg-white/80 backdrop-blur-sm border-t border-gray-100 scroll-mt-16">
+        <h2 class="text-3xl font-bold mb-8 text-center text-[#1e293b]">About Me <span class="text-[#FF4F0F]">.</span>
+        </h2>
+        <div class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-12 text-center md:text-left">
+            <p class="mb-4">
+                I am a passionate Computer Science and Engineering student at North South University with a strong interest in software engineering, backend systems, and web application development. All thanks and praise to Allah for giving me the opportunity to pursue this path from growing up in a small village in Joypurhat to solving real-world problems.
+            </p>
+        </div>
+
+        <h3 class="text-2xl font-bold mb-6 text-center text-[#1e293b]">Education</h3>
+        <div class="max-w-3xl mx-auto space-y-6">
+            <div
+                class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition transform hover:-translate-y-1">
+                <div
+                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 border border-gray-100 overflow-hidden shadow-sm">
+                    <img src="NSU.png" alt="North South University Logo" class="w-full h-full object-contain p-1">
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold"><a href="https://www.northsouth.edu" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-[#00809D] hover:underline transition">North
+                            South University</a></h4>
+                    <p class="text-[#00809D] font-medium">B.Sc. in Computer Science & Engineering</p>
+                    <p class="text-sm text-gray-500 mt-1">Present</p>
+                </div>
+            </div>
+            <div
+                class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition transform hover:-translate-y-1">
+                <div
+                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 border border-gray-100 overflow-hidden shadow-sm">
+                    <img src="dhaka_college.png" alt="Dhaka College Logo" class="w-full h-full object-contain p-1">
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold"><a href="https://www.dhakacollege.edu.bd" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-[#00809D] hover:underline transition">Dhaka
+                            College</a></h4>
+                    <p class="text-gray-600 font-medium">Higher Secondary Certificate</p>
+                </div>
+            </div>
+            <div
+                class="p-6 bg-white rounded-xl shadow-sm border border-gray-100 flex items-start gap-4 hover:shadow-md transition transform hover:-translate-y-1">
+                <div
+                    class="w-12 h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 border border-gray-100 overflow-hidden shadow-sm">
+                    <img src="rbghs.png" alt="R.B. Govt High School Logo" class="w-full h-full object-contain p-1">
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold"><a href="https://www.rbgovthighschool.edu.bd/" target="_blank"
+                            rel="noopener noreferrer" class="hover:text-[#00809D] hover:underline transition">R.B. Govt
+                            High School, Joypurhat</a></h4>
+                    <p class="text-gray-600 font-medium">Secondary School Certificate (SSC)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (LinkedIn Style) -->
+    <section id="experience" class="py-20 px-8 md:px-24 scroll-mt-16">
+        <h2 class="text-3xl font-bold mb-12 text-center text-[#1e293b]">Experience <span class="text-[#FF4F0F]">.</span>
+        </h2>
+        <div
+            class="max-w-3xl mx-auto relative border-l-2 border-gray-200 pl-8 ml-4 md:mx-auto md:ml-[calc(50%-1.5rem)] lg:ml-auto">
+
+            <!-- Experience Item -->
+            <div class="mb-12 relative group">
+                <!-- Timeline Dot -->
+                <div
+                    class="absolute w-6 h-6 bg-[#FF4F0F] rounded-full -left-[45px] top-1 border-4 border-white shadow group-hover:scale-125 transition-transform duration-300">
+                </div>
+
+                <div
+                    class="bg-white/80 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition duration-300">
+                    <h3 class="text-2xl font-bold text-[#1e293b]">Web Developer</h3>
+                    <div class="flex items-center gap-2 mt-1 mb-3">
+                        <a href="https://goatesports.net/" target="_blank"
+                            class="text-lg font-semibold text-[#00809D] hover:underline">Goat Esports</a>
+                        <span class="text-gray-400">&bull;</span>
+                        <span class="text-sm text-gray-500 font-medium">Present</span>
+                    </div>
+                    <p class="text-gray-700">
+                        Developing and maintaining the organization's web presence. Working on dynamic UI/UX features,
+                        integrating interactive elements, and ensuring a smooth experience for the esports community.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="text-center py-8 px-4 text-white bg-[#1e293b]">
+        <div class="flex justify-center gap-4 mb-4">
+            <a href="https://github.com/tawhid-88" class="text-gray-400 hover:text-white transition"><i
+                    class="fa-brands fa-github text-xl"></i></a>
+            <a href="https://x.com/TawhidHasan16" class="text-gray-400 hover:text-white transition"><i
+                    class="fa-brands fa-x-twitter text-xl"></i></a>
+            <a href="https://www.facebook.com/tawhid.hasan.88/" class="text-gray-400 hover:text-white transition"><i
+                    class="fa-brands fa-facebook text-xl"></i></a>
+        </div>
         <p>&copy; 2026 Tawhid Hasan. All Rights Reserved.</p>
     </footer>
     <script src="script.js"></script>
